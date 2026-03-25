@@ -159,6 +159,26 @@ For a production environment, would be a good approach:
 
 ---
 
+## Pipeline in Action
+
+### DAG — all tasks completed
+
+![DAG success](docs/dag_success.png)
+
+### Silver layer — sample from Airflow logs
+
+![Silver logs](docs/silver_logs.png)
+
+### Gold layer — aggregated output
+
+![Gold logs](docs/gold_logs.png)
+
+### MinIO — bucket structure
+
+![MinIO bucket](docs/minio_bucket.png)
+
+---
+
 ## Trade-offs
 
 - **Overwrite on Silver/Gold**: Each run replaces the old data. If we needed to keep history, we could use append + merge or delta tables.
